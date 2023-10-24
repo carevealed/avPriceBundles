@@ -8,9 +8,9 @@ import sys
 ## Both arguments expected as strings. Returns a string.
 def get_price_bundle(object_format, duration):
 
-    video_cassette_formats = ['VHS', 'MiniDV', 'Video8', 'Hi8', 'DVCAM', 'U-matic: S',
-                              'VHS: S-VHS', 'U-matic', 'VHS: VHS-C', 'Betacam: SP' ]
-    film_formats = ['8mm film', '16mm film', 'Super 8mm film', '35mm film']
+    video_cassette_formats = ['VHS', 'MiniDV', 'Video8', 'Hi8', 'DVCAM', 'U-matic', 'U-matic: S', 'U-matic: SP',
+                              'VHS: S-VHS', 'VHS: VHS-C', 'Betamax', 'Betamax: ED', 'Betacam', 'Betacam: SP' ]
+    film_formats = ['8mm film', 'Super 8mm film', '16mm film', 'Super 16mm film', '35mm film']
     audio_formats = ['Audio cassette', '1/4 inch audio tape', 'Micro-cassette', 'DAT']
 
     bucket=''   # bucket of time, exact value will depend on format
@@ -18,7 +18,7 @@ def get_price_bundle(object_format, duration):
     
     if object_format in video_cassette_formats: # if the format is one of the video cassette formats
         bucket = get_video_bucket(seconds)
-        return "Video Casette" + bucket
+        return "Video Cassette" + bucket
     elif object_format in film_formats: # if the format is one of the film formats
         bucket = get_film_bucket(seconds)
         return "Film 2k" + bucket
