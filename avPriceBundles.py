@@ -128,7 +128,7 @@ def get_format_col(header):
 ## Takes in a header row and returns the index of the column containing the object's duration
 def get_length_col(header):
     for index, heading in enumerate(header):
-        if "obj_prsv_duration_string" in heading:
+        if "obj_av_item_parts__ip_duration" in heading:
             return index
 
 ## Takes in a header row and returns the index of the column containing the object's price bundle
